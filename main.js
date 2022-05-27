@@ -24,15 +24,15 @@ if(localStorage.getItem("bestBrain")){
 }
 
 const traffic = [
-    new Car(road.getLaneCenter(1),-100,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(2),-300,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(3),-250,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(0),-500,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(0),-350,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(3),-650,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(4),-700,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(3),-700,29,71,"DUMMY",getRandomFromRange(1,4)),
-    new Car(road.getLaneCenter(2),-800,29,71,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(1),-100,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(2),-300,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(3),-250,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(0),-500,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(0),-350,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(3),-650,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(4),-700,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(3),-700,32,66,"DUMMY",getRandomFromRange(1,4)),
+    new Car(road.getLaneCenter(2),-800,32,66,"DUMMY",getRandomFromRange(1,4)),
     
 ];
 
