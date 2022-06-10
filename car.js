@@ -11,6 +11,8 @@ class Car{
         this.friction=0.05;
         this.angle=0;
         this.wheelSensitivity=0.01;
+        this.gears = [0.5,0.6,0.7,0.8,0.9,1]
+        this.gearActual = 1;
         this.damaged=false;
 
         this.useBrain=controlType=="AI";
@@ -47,7 +49,7 @@ class Car{
                 s=>s==null?0:1-s.offset
             );
             const outputs=NeuralNetwork.feedForward(offsets,this.brain);
-            console.log(outputs);
+            // console.log(outputs);
 
             if(this.useBrain){
                 this.controls.forward=outputs[0];
@@ -103,15 +105,17 @@ class Car{
     }
 
     #move(){
+
         if(this.controls.forward){
-            this.speed+=this.acceleration;
+            this.speed+=this.acceleration*this.gears[this.controls.gear-1];
+            
         }
         if(this.controls.reverse){
-            this.speed-=this.acceleration;
+            this.speed-=this.acceleration*this.gears[0];
         }
 
-        if(this.speed>this.maxSpeed){
-            this.speed=this.maxSpeed;
+        if(this.speed>this.maxSpeed*this.gears[this.controls.gear-1]){
+            this.speed=this.maxSpeed*this.gears[this.controls.gear-1];
         }
         if(this.speed<-this.maxSpeed/2){
             this.speed=-this.maxSpeed/2;

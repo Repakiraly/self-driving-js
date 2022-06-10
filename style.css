@@ -5,7 +5,7 @@
 }
 
 body {
-    background: darkgray;
+    background: #252223;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ button:hover{
 }
 
 #carCanvas{
-    background: lightgray;
+    background: #2D4958;
 }
 
 #networkCanvas {
